@@ -24,3 +24,12 @@ input[type="textbox"]{
     color: black;
     outline: none;
 }
+
+#description {
+    font-size: 25px;
+    border: 2px solid green;
+    padding-left: 10px;
+}
+
+
+#theat
