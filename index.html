@@ -14,8 +14,8 @@
      <div id = intro>
          <p> There is no more water! What would you do?</p>
          <form>
-             <input type="textbox" placeholder="Type Here" name="answer">
-             <button type= "button" onclick="myFunction()">Submit</button>
+             <input type="textbox" placeholder="Type Here" id="answer">
+             <button type= "button" onclick="textValue()">Submit</button>
          </form>
      </div>
      
@@ -52,7 +52,12 @@
         }
     </script>
     
-    
+    <script>
+        function textValue(){
+            var answerValue = document.getElementById('answer').value
+            console.log(answerValue)
+        }
+    </script>
     
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
     <script>
@@ -66,10 +71,6 @@
         messagingSenderId: "661691233626"
       };
       firebase.initializeApp(config);
-    </script>
-    
-    <script>
-        var answerValue = document.getElementsByName('answer')[1].value
     </script>
   </body>
 </html>
