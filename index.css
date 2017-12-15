@@ -20,14 +20,18 @@ input[type="textbox"]{
     background-color: #ffe6b4;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid lightblue;
     color: black;
     outline: none;
 }
 
+/*hover:input[type="textbox"]{
+   border-bottom: 2px solid orange;
+}*/
+
 #description {
     font-size: 25px;
-    border: 2px solid green;
+    border: 2px solid lightblue;
     padding-left: 10px;
     display: none;
 }
