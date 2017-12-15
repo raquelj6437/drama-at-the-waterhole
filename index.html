@@ -14,7 +14,7 @@
      <div id = intro>
          <p> There is no more water! What would you do?</p>
          <form>
-             <input type="textbox" placeholder="Type Here">
+             <input type="textbox" placeholder="Type Here" name="answer">
              <button type= "button" onclick="myFunction()">Submit</button>
          </form>
      </div>
@@ -68,7 +68,8 @@
     </script>
     
     <script>
-        
+        var jobValue = document.getElementsByName('answer')[0].value
+        alert(job)
     </script>
   </body>
 </html>
