@@ -58,7 +58,19 @@ body{
 }
 
 #border{
-    float: left;
+    float: right;
     position: fixed;
     width: 100px;
+}
+
+#border2{
+    float: right;
+    /*position: fixed;*/
+    width: 100px;
+}
+
+#body{
+    position: absolute;
+    left: 100px;
+    right: 100px;
 }
