@@ -32,8 +32,16 @@ input[type="textbox"]{
     display: none;
 }
 
+#newsletter{
+    font-size: 25px;
+}
+
 
 #theatre {
 padding-left: 70px;
 font-weight: bold;
+}
+
+#pictures{
+
 }
