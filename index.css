@@ -20,7 +20,7 @@ input[type="textbox"]{
     background-color: #ffe6b4;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid lightblue;
+    border-bottom: 2px solid lightgreen;
     color: black;
     outline: none;
 }
@@ -31,7 +31,7 @@ input[type="textbox"]{
 
 #description {
     font-size: 25px;
-    border: 2px solid lightblue;
+    border: 2px solid lightgreen;
     padding-left: 10px;
     display: none;
 }
