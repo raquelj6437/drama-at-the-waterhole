@@ -7,43 +7,44 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Vollkorn" rel="stylesheet">
   </head>
   <body>
-     <div id = "header">
-        <h1>Drama at the Waterhole</h1>
-        <h4> - A Day in the Savanna.</h4>
-     </div>
-     <div id = intro>
-         <p> There is no more water! What would you do?</p>
-         <form>
-             <input type="textbox" placeholder="Type Here" id="answer">
-             <button type= "button" onclick="textValue()">Submit</button>
-         </form>
+      <div>
+         <img id="border" src="images/border.png">
      </div>
      
-     <div id = "description">
-         <p>
-             The dusty ground is covered in shrubs as far as the eye can see... The waterhole is the hub, the meeting place. The animals from all around the Savanna come together to rehydrate in the cooling water of the waterhole. One day, something disastrous happens; the waterhole dries up! Who is to blame for this devastating rare occurrence? Where will the animals of the Savanna go? How will they find the culprit? Watch this epic tale of survival, loyalty and greed. <br>
-             <p id=theatre>“Drama at the Waterhole” coming to a Movie Theatre near you.</p> 
-         </p>
+     <div id = "body">
+         <div id = "header">
+            <h1>Drama at the Waterhole</h1>
+            <h4> - A Day in the Savanna.</h4>
+         </div>
+         <div id = intro>
+             <p> There is no more water! What would you do?</p>
+             <form>
+                 <input type="textbox" placeholder="Type Here" id="answer">
+                 <button type= "button" onclick="textValue()">Submit</button>
+             </form>
+         </div>
+         
+         <div id = "description">
+             <p>
+                 The dusty ground is covered in shrubs as far as the eye can see... The waterhole is the hub, the meeting place. The animals from all around the Savanna come together to rehydrate in the cooling water of the waterhole. One day, something disastrous happens; the waterhole dries up! Who is to blame for this devastating rare occurrence? Where will the animals of the Savanna go? How will they find the culprit? Watch this epic tale of survival, loyalty and greed. <br>
+                 <p id=theatre>“Drama at the Waterhole” coming to a Movie Theatre near you.</p> 
+             </p>
+         </div>
+         
+         <div id = "pictures">
+             <img class= "moviePic" src="images/elephants.jpg">
+             <img class="moviePic" src="images/mammal.jpg">
+             <img class="moviePic" src="images/waterhole.jpg">
+         </div>
+         
+         <div id = "newsletter">
+             <p> Want to hear more? Sign up for our newsletter and get the latest news on the movie!</p>
+             <form>
+                 <input type="textbox" placeholder="Enter e-mail">
+                 <input type="submit" value="Submit" onclick="myFunction()">
+             </form>
+         </div>
      </div>
-     
-     <div id = "pictures">
-         <img src="images/elephants.jpg">
-         <img src="images/mammal.jpg">
-         <img src="images/waterhole.jpg">
-     </div>
-     
-     <div id="border">
-           <img src="images/border.png">
-     </div>
-     
-     <div id = "newsletter">
-         <p> Want to hear more? Sign up for our newsletter and get the latest news on the movie!</p>
-         <form>
-             <input type="textbox" placeholder="Enter e-mail">
-             <input type="submit" value="Submit" onclick="myFunction()">
-         </form>
-     </div>
-     
      <script>
         function myFunction() {
             var x = document.getElementById("description");
@@ -80,5 +81,6 @@
     <script>
         var answerValue = document.getElementsByName('answer')[1].value
     </script>
+
   </body>
 </html>
