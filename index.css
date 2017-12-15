@@ -57,16 +57,18 @@ body{
     height: 400px;
 }
 
+.border{
+    /*position: fixed;*/
+}
+
 #border{
     float: right;
-    position: fixed;
     width: 100px;
 }
 
 #border2{
-    float: right;
-    /*position: fixed;*/
     width: 100px;
+    left: 400px;
 }
 
 #body{
