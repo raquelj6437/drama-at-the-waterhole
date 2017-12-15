@@ -47,8 +47,8 @@ padding-left: 70px;
 font-weight: bold;
 }
 
-#pictures{
-
+body{
+    border-image:url(images/border.png);
 }
 
 .moviePic{
