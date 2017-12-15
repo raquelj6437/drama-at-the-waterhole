@@ -15,7 +15,7 @@
          <p> There is no more water! What would you do?</p>
          <form>
              <input type="textbox" placeholder="Type Here">
-             <input type="submit" value="Submit" onclick="myFunction()">
+             <button type= "button" onclick="myFunction()">Submit</button>
          </form>
      </div>
      
@@ -43,10 +43,10 @@
      <script>
         function myFunction() {
             var x = document.getElementById("description");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
+            if (x.style.display === "block") {
                 x.style.display = "none";
+            } else {
+                x.style.display = "block";
             }
         }
     </script>
