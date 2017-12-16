@@ -26,10 +26,6 @@ input[type="textbox"]{
     outline: none;
 }
 
-/*hover:input[type="textbox"]{
-   border-bottom: 2px solid orange;
-}*/
-
 #description {
     font-size: 25px;
     border: 2px solid lightgreen;
@@ -58,7 +54,7 @@ body{
 }
 
 .border{
-    /*position: fixed;*/
+
 }
 
 #border{
@@ -68,11 +64,11 @@ body{
 
 #border2{
     width: 100px;
-    left: 400px;
 }
 
 #body{
     position: absolute;
     left: 100px;
     right: 100px;
+    top: 1px;
 }
