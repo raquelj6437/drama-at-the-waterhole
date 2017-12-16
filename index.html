@@ -57,14 +57,7 @@
             }
         }
     </script>
-    
-    <script>
-        function textValue(){
-            var answerValue = document.getElementById('answer').value
-            console.log(answerValue)
-        }
-    </script>
-    
+
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -77,11 +70,21 @@
         messagingSenderId: "661691233626"
       };
       firebase.initializeApp(config);
+      
+      var database = firebase.database();
+      
+      function writeUserData(answerValue) {
+          firebase.database().ref('answers/').push().set({
+            answerValue:answerValue
+          });
+        }
+        
+      function textValue(){
+            var answerValue = document.getElementById('answer').value
+            console.log(answerValue)
+            writeUserData(answerValue);
+        }
     </script>
     
-    <script>
-        var answerValue = document.getElementsByName('answer')[1].value
-    </script>
-
   </body>
 </html>
