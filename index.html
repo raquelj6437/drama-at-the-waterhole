@@ -17,12 +17,17 @@
             <h1>Drama at the Waterhole</h1>
             <h4> - A Day in the Savanna.</h4>
          </div>
-         <div id = intro>
+         <div id="intro">
              <p> There is no more water! What would you do?</p>
              <form>
                  <input type="textbox" placeholder="Type Here" id="answer">
                  <button type= "button" onclick="textValue()">Submit</button>
              </form>
+         </div>
+         
+         <p>Responses:</p>
+         <div id="answers">
+            <ol id="answers2"></ol>
          </div>
          
          <div id = "description">
@@ -74,7 +79,7 @@
       var database = firebase.database();
       
       function writeUserData(answerValue) {
-          firebase.database().ref('answers/').push().set({
+          firebase.database().ref('answers/' + answerValue).set({
             answerValue:answerValue
           });
         }
@@ -83,6 +88,12 @@
             var answerValue = document.getElementById('answer').value
             console.log(answerValue)
             writeUserData(answerValue);
+        }
+        
+      function appendUpcomingAnswers(answers) {
+          var event = $('<li></li>').append('<p>'+answers+ '</p>');
+          var eventInfo = $('<ul></ul>').
+          document.getElementById('answers2').append(event).append(eventInfo);
         }
     </script>
     

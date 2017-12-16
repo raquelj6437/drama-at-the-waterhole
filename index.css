@@ -72,3 +72,12 @@ body{
     right: 100px;
     top: 1px;
 }
+
+#answers{
+    height: 100px;
+    width: 100%;
+    background-color: lightgreen;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: scroll;
+}
