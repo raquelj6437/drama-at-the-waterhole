@@ -65,6 +65,10 @@
             else {
                 x.style.display = "block";
             }
+            
+            var answerValue = document.getElementById('answer').value
+            console.log(answerValue)
+            writeUserData(answerValue);
         }
     </script>
 
@@ -87,12 +91,6 @@
           firebase.database().ref('answers/' + answerValue).set({
             answerValue:answerValue
           });
-        }
-        
-      function textValue(){
-            var answerValue = document.getElementById('answer').value
-            console.log(answerValue)
-            writeUserData(answerValue);
         }
         
       function appendUpcomingAnswers(answers) {
