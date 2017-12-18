@@ -81,3 +81,11 @@ body{
     margin-bottom: 20px;
     overflow: scroll;
 }
+
+button{
+    padding-top:10px;
+    padding-bottom:10px;
+    width: 100%;
+    background-color: lightgreen;
+    border:no;
+}
