@@ -87,5 +87,9 @@ button{
     padding-bottom:10px;
     width: 100%;
     background-color: lightgreen;
-    border:no;
+    border:none;
+}
+
+h1{
+    text-align:center;
 }
