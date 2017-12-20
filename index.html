@@ -54,6 +54,8 @@
                  <input type="textbox" placeholder="Enter e-mail">
                  <button type="button">Submit</button>
              </form>
+             
+             <p><a href="sequel.html">Click here for the sequel!</a></p>
          </div>
      </div>
      <script>
@@ -88,16 +90,26 @@
       var database = firebase.database();
       
       function writeUserData(answerValue) {
-          firebase.database().ref('answers/' + answerValue).set({
-            answerValue:answerValue
+          firebase.database().ref('answers/').push().set({
+            value:answerValue
           });
+          
+          var ref = firebase.database().ref("answers");
+            ref.once("value")
+              .then(function(snapshot) {
+                var key = Object.keys(snapshot.val());
+                var name = snapshot.child(key).val();
+                
+                console.log(name)
+                console.log(key)
+              });
         }
         
-      function appendUpcomingAnswers(answers) {
-          var event = $('<li></li>').append('<p>'+answers+ '</p>');
-          var eventInfo = $('<ul></ul>').
-          document.getElementById('answers2').append(event).append(eventInfo);
-        }
+    //   function appendUpcomingAnswers(answers) {
+    //       var event = $('<li></li>').append('<p>'+answers+ '</p>');
+    //       var eventInfo = $('<ul></ul>').
+    //       document.getElementById('answers2').append(event).append(eventInfo);
+    //     }
     </script>
     
   </body>

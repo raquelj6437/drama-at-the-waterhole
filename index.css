@@ -93,3 +93,8 @@ button{
 h1{
     text-align:center;
 }
+
+a{
+    text-decoration: none;
+    color: green;
+}
