@@ -34,10 +34,12 @@
              </form>
          </div>
          
-         <!--<p>Responses:</p>-->
-         <!--<div id="answers">-->
-         <!--   <ol id="answers2"></ol>-->
-         <!--</div>-->
+         <p>Responses:</p>
+         <div id="answers">
+            <ul id="responses">
+                
+            </ul>
+         </div>
          
          <div id = "description">
              <p>
@@ -83,7 +85,6 @@
             }
             
             var answerValue = document.getElementById('answer').value
-            console.log(answerValue)
             writeUserData(answerValue);
         }
     </script>
@@ -108,17 +109,22 @@
             value:answerValue
           });
           
-        //   var ref = firebase.database().ref("answers");
-        //     ref.once("value")
-        //       .then(function(snapshot) {
-        //         var key = Object.keys(snapshot.val());
-        //         var name = snapshot.child(key).val();
+          var ref = firebase.database().ref();
+            ref.once("value")
+              .then(function(snapshot) {
+
+                var name = snapshot.child("repsonses/").val();
+                var ansArray = Object.keys(name)
                 
-        //         console.log(name)
-        //         console.log(key)
-        //       });
-        
-        
+                var items = document.getElementById("responses");
+                for (var i = 0; i < ansArray.length; i++ ) {
+                    var item = document.createElement("li");
+                    item.innerHTML = ansArray[i];
+                    items.appendChild(item);
+                }
+                
+                console.log(ansArray)
+              });
         }
         
     </script>
