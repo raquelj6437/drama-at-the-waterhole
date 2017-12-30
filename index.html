@@ -59,8 +59,8 @@
          
          <div>
             <video width="100%" height="500" controls>
-              <source src="images/Drama-At-the-Waterhole.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+                <source src="images/Drama-At-the-Waterhole.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
          </div>
          
@@ -75,22 +75,28 @@
          </div>
      </div>
      <script>
+      var go = 1
         function myFunction() {
             var answerValue = document.getElementById('answer').value
-            console.log(answerValue)
-            
+
             if (answerValue === "" || answerValue.indexOf(' ') !== -1){
                 window.alert("Please type in a word or a sentence. Thank you!")
             }
             else{
-                writeUserData(answerValue);
+                if(go == 1){
+                    writeUserData(answerValue);
                 
-                var x = document.getElementById("description");
-                if (x.style.display == "none") {
-                    x.style.display = "block";
-                } 
-                else {
-                    x.style.display = "block";
+                    var x = document.getElementById("description");
+                    if (x.style.display == "none") {
+                        x.style.display = "block";
+                    } 
+                    else {
+                        x.style.display = "block";
+                    }
+                    go = 0
+                }
+                else{
+                    window.alert("Refresh the page to submit again.")
                 }
             }
         }
