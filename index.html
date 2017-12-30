@@ -77,10 +77,11 @@
      <script>
       var go = 1
         function myFunction() {
-            var answerValue = document.getElementById('answer').value
+            var answerValue2 = document.getElementById('answer').value
+            var answerValue = answerValue2.trim()
 
-            if (answerValue === "" || answerValue.indexOf(' ') !== -1){
-                window.alert("Please type in a word or a sentence or delete any spaces that are before the first word. Thank you!")
+            if (answerValue === ""){
+                window.alert("Please type in a word or a sentence. Thank you!")
             }
             else{
                 if(go == 1){
