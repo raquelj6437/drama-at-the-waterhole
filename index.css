@@ -98,3 +98,7 @@ a{
     text-decoration: none;
     color: green;
 }
+
+.tp-video-play-button {
+    display: none !important
+}

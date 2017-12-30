@@ -28,6 +28,7 @@
          </div>
          <div id="intro">
              <p> There is no more water! What would you do?</p>
+             <strong><p style = "font-size:20px">To watch the trailer you must submit!</p></strong>
              <form>
                  <input type="textbox" placeholder="Type Here" id="answer">
                  <button type= "button" onclick= "myFunction()">Submit</button>
@@ -58,7 +59,7 @@
          </div>
          
          <div>
-            <video width="100%" height="500" controls>
+            <video width="100%" height="500" id = "myvideo" onclick="movieClick()">
                 <source src="images/Drama-At-the-Waterhole.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -76,15 +77,20 @@
      </div>
      <script>
       var go = 1
+      var play = 0
+        
         function myFunction() {
             var answerValue2 = document.getElementById('answer').value
             var answerValue = answerValue2.trim()
+            var video = document.getElementById("myvideo");
 
             if (answerValue === ""){
                 window.alert("Please type in a word or a sentence. Thank you!")
+                video.removeAttribute("controls")
             }
             else{
                 if(go == 1){
+                    video.setAttribute("controls","controls")
                     writeUserData(answerValue);
                 
                     var x = document.getElementById("description");
@@ -95,10 +101,20 @@
                         x.style.display = "block";
                     }
                     go = 0
+                    play = 1
                 }
                 else{
                     window.alert("Refresh the page to submit again.")
                 }
+            }
+        }
+        
+        function movieClick(){
+            if (play === 0){
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+                
+                window.alert("You have to submit an answer before playing the trailer.")
             }
         }
     </script>
