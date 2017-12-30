@@ -76,16 +76,23 @@
      </div>
      <script>
         function myFunction() {
-            var x = document.getElementById("description");
-            if (x.style.display == "none") {
-                x.style.display = "block";
-            } 
-            else {
-                x.style.display = "block";
-            }
-            
             var answerValue = document.getElementById('answer').value
-            writeUserData(answerValue);
+            console.log(answerValue)
+            
+            if (answerValue === "" || answerValue.indexOf(' ') !== -1){
+                window.alert("Please type in a word or a sentence. Thank you!")
+            }
+            else{
+                writeUserData(answerValue);
+                
+                var x = document.getElementById("description");
+                if (x.style.display == "none") {
+                    x.style.display = "block";
+                } 
+                else {
+                    x.style.display = "block";
+                }
+            }
         }
     </script>
 
