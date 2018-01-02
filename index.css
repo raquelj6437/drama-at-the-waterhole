@@ -1,7 +1,9 @@
-body {
+html, body {
     background-color: #ffe6b4;
     font-family: 'Open Sans Condensed', sans-serif;
     display:inline;
+    height: 1000px;
+    margin: 0;
 }
 
 #header{
@@ -43,10 +45,6 @@ padding-left: 70px;
 font-weight: bold;
 }
 
-body{
-    border-image:url(images/border.png);
-}
-
 .moviePic{
     display: inline;
     width: 33%;
@@ -54,16 +52,16 @@ body{
 }
 
 .border{
-
-}
-
-#border{
-    float: right;
-    width: 100px;
+    position: fixed;
+    width:100px;
+    height: 100%;
+    background-image: url("images/border.png");
+    background-repeat: repeat-y;
 }
 
 #border2{
-    width: 100px;
+    right: 0px;
+    bottom: 0px;
 }
 
 #body{
@@ -97,8 +95,4 @@ h1{
 a{
     text-decoration: none;
     color: green;
-}
-
-.tp-video-play-button {
-    display: none !important
 }
