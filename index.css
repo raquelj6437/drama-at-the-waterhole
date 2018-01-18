@@ -17,18 +17,24 @@ html, body {
 
 #title{
     position: relative;
-    animation: example 5s;
-    font-size: 30px;
+    animation: title 2s;
+    font-size: 30px; 
+    transition: 0.70s;
+}
+
+#title:hover{
+    transition: 0.70s;
+    transform: rotate(360deg);
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
+@-webkit-keyframes title {
     from   {top:-200px;}
     to {top:0px;}
 }
 
 /* Standard syntax */
-@keyframes example {
+@keyframes title {
     from   {top:-200px;}
     to {top:0px;}
 }
@@ -104,8 +110,9 @@ button{
     padding-top:10px;
     padding-bottom:10px;
     width: 100%;
-    background-color: lightgreen;
     border:none;
+    background: radial-gradient(green, lightgreen);
+    color: white;
 }
 
 h1{
