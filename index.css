@@ -20,13 +20,13 @@ html, body {
     animation: title 2s;
     font-size: 30px; 
     transition: 0.70s;
-    text-shadow: 2px 2px 5px light;
+    text-shadow: 2px 2px 5px lightgreen;
 }
 
-#title:hover{
-    transition: 0.70s;
-    transform: rotate(360deg);
-}
+/*#title:hover{*/
+/*    transition: 0.70s;*/
+/*    transform: rotate(360deg);*/
+/*}*/
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes title {
