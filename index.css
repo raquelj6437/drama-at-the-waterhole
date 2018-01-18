@@ -20,6 +20,7 @@ html, body {
     animation: title 2s;
     font-size: 30px; 
     transition: 0.70s;
+    text-shadow: 2px 2px 5px light;
 }
 
 #title:hover{
@@ -84,9 +85,19 @@ font-weight: bold;
     /*visibility: hidden*/
 }
 
+
+.border:hover{
+    transform: scaleX(-1)
+}
+
+#border2:hover{
+    transform: scaleX(1)
+}
+
 #border2{
     right: 0px;
     bottom: 0px;
+    transform: scaleX(-1)
 }
 
 #body{
