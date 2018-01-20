@@ -145,7 +145,7 @@ a{
 }
     
 #ball2{
-    animation: ball2 2s linear 0s infinite alternate;
+    animation: ball2 2s linear infinite alternate;
 }
     
 @-webkit-keyframes ball1 {
@@ -153,11 +153,11 @@ a{
     25%  {background-color:yellow;}
     50%  {background-color:lightyellow;}
     75%  {background-color:lightgreen;}
-    100% {background-color:green; left:360px; top:-80px;}
+    100% {background-color:green; left:98%; top:-80px;}
 }
 
 @-webkit-keyframes ball2 {
-    0%   {background-color:green; left:360px; top: -170px;}
+    0%   {background-color:green; left:98%; top: -170px;}
     25%  {background-color:yellow;}
     50%  {background-color:lightyellow;}
     75%  {background-color:lightgreen;}
